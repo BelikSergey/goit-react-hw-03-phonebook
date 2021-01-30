@@ -1,4 +1,6 @@
-const Filter = ({ filter, onChange }) => {
+import PropTypes from "prop-types";
+
+const Filter = ({ filter = "", onChange }) => {
   // console.log('click');
   return (
     <input
@@ -9,5 +11,10 @@ const Filter = ({ filter, onChange }) => {
       onChange={({ target }) => onChange(target.value)}
     />
   );
+};
+
+Filter.propType = {
+  filter: PropTypes.string,
+  onChange: PropTypes.func,
 };
 export default Filter;
