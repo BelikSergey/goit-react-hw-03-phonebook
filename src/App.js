@@ -15,7 +15,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log("компонент смонтирован");
+    // console.log("компонент смонтирован");
     if (localStorage.getItem("contacts") !== null) {
       const contacts = JSON.parse(localStorage.getItem("contacts"));
       // console.log(contacts);
